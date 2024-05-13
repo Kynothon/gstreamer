@@ -67,4 +67,4 @@ RUN cd gstreamer \
 
 FROM debian:${DEBIAN_VERSION} as release
 
-cp --from=build /opt/gstreamer /opt/gstreamer
+COPY --from=build /opt/gstreamer /opt/gstreamer
