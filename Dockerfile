@@ -73,7 +73,7 @@ ENV PATH=/opt/gstreamer/bin:${PATH}
 COPY --from=build /opt/gstreamer /opt/gstreamer
 
 RUN apt update \
-    && apt upgrade \
+    && apt upgrade -yqq \
     && apt install -yqq libglib2.0-0 libgudev-1.0-0 libexpat1 \
     && echo /opt/gstreamer/lib/x86_64-linux-gnu > /etc/ld.so.conf.d/gstreamer.conf \
     && ldconfig
