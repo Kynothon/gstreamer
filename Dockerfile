@@ -36,7 +36,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y \
 
 FROM builder as build
 
-ARG GST_VERSION=1.24.3
+ARG GST_VERSION=1.24.4
 ENV CARGO_BUILD_JOB=1
 
 RUN git clone --depth 1 --branch ${GST_VERSION} https://gitlab.freedesktop.org/gstreamer/gstreamer.git \
